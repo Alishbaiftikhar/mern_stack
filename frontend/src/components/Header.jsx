@@ -18,13 +18,20 @@ function Header() {
         <Link to="/">GoalSetter</Link>
       </div>
       <ul>
+        {user && (
+          <li>
+            <div onClick={onLogout} className="logout">
+              Logout
+            </div>
+          </li>
+        )}
         <li>
-          <Link to="/login">
+          <Link className="login" to="/login">
             <FaSignInAlt /> Login
           </Link>
         </li>
         <li>
-          <Link to="/register">
+          <Link className="register" to="/register">
             <FaUser /> Register
           </Link>
         </li>
